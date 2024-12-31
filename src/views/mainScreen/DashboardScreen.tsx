@@ -3,10 +3,10 @@ import React, {FC} from 'react';
 
 interface Props {}
 
-const App: FC<Props> = props => {
+const DashboardScreen: FC<Props> = props => {
   return (
     <View style={styles.container}>
-      <Text style={styles.textStyle}>App</Text>
+      <Text style={styles.textStyle}>Dashboard Screen</Text>
     </View>
   );
 };
@@ -16,12 +16,12 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF'
+    backgroundColor: '#F5FCFF',
   },
   textStyle: {
     fontSize: 18,
     color: '#111111',
-  }, 
+  },
 });
 
-export default App;
+export default DashboardScreen;
