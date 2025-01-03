@@ -1,27 +1,24 @@
-import {StyleSheet, Text, View} from 'react-native';
-import React, {FC} from 'react';
+import * as React from 'react';
+import {View, Text} from 'react-native';
+import {createStaticNavigation} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-interface Props {}
-
-const App: FC<Props> = props => {
+function HomeScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.textStyle}>App</Text>
+    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+      <Text>Home Screen</Text>
     </View>
   );
-};
+}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF'
+const RootStack = createNativeStackNavigator({
+  screens: {
+    Home: HomeScreen,
   },
-  textStyle: {
-    fontSize: 18,
-    color: '#111111',
-  }, 
 });
 
-export default App;
+const Navigation = createStaticNavigation(RootStack);
+
+export default function App() {
+  return <Navigation />;
+}
