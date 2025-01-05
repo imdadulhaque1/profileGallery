@@ -1,0 +1,41 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/PlaywriteIS-ExtraLight.ttf",
+      "sha1": "bb49b9253a60f3259d709318b7ca3f363a679cf5"
+    },
+    {
+      "path": "src/assets/fonts/PlaywriteIS-Light.ttf",
+      "sha1": "0f6bb6b5bdc1b8b65691e578ba39ae132427af23"
+    },
+    {
+      "path": "src/assets/fonts/PlaywriteIS-Regular.ttf",
+      "sha1": "12e5202cc6b4faf775b532787ed4c4bd78f187d4"
+    },
+    {
+      "path": "src/assets/fonts/PlaywriteIS-Thin.ttf",
+      "sha1": "328fde4a3d07efaecd1488ff2c0de76380d7d3f3"
+    },
+    {
+      "path": "src/assets/fonts/WorkSans-Bold.ttf",
+      "sha1": "29ee9214b2baa985b6ca8f1474a5d3c799a4fe81"
+    },
+    {
+      "path": "src/assets/fonts/WorkSans-Medium.ttf",
+      "sha1": "b95c7b1d3a5130d2d87e86f91eb397a428b4ba43"
+    },
+    {
+      "path": "src/assets/fonts/WorkSans-Regular.ttf",
+      "sha1": "943c38fa3c44e48acc89c9547e30dc57991cb150"
+    },
+    {
+      "path": "src/assets/fonts/WorkSans-SemiBold.ttf",
+      "sha1": "d118e3c6fd7618bd7b36072336e5710871c99cc0"
+    },
+    {
+      "path": "src/assets/fonts/WorkSans-Thin.ttf",
+      "sha1": "c2ff22018bcb4a7849339432b301a6ce863018be"
+    }
+  ]
+}
