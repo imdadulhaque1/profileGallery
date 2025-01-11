@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
   errorText: {
     color: 'red',
     fontFamily: 'WorkSans-Regular',
-    fontSize: screenWidth / 30,
+    fontSize: screenWidth > 550 ? screenWidth / 35 : screenWidth / 30,
   },
 });
 
