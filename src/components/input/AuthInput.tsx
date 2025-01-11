@@ -22,9 +22,9 @@ const AuthInput: FC<AuthInputInterafce> = ({
   ...props
 }) => {
   return (
-    <View style={{width: '100%', ...mainContainerStyle}}>
+    <View style={[mainContainerStyle, {width: '100%'}]}>
       <Text style={[styles.txtStyle, {...labelStyle}]}>{label}</Text>
-      <View style={[styles.containerStyle, {...inputContainerStyle}]}>
+      <View style={[styles.containerStyle, inputContainerStyle]}>
         <TextInput
           style={[styles.inputStyle, {...inputFieldStyle}]}
           secureTextEntry={isSecure}
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     backgroundColor: COLORS.primaryLight90,
     borderRadius: 10,
-    paddingVertical: 10,
+    minHeight: 45,
     paddingHorizontal: 10,
   },
   inputStyle: {

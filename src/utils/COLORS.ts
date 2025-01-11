@@ -4,7 +4,8 @@ export const COLORS = {
   black: '#000000',
   successColor: '#b6f0bb',
 
-  activeColor: '#0073e6',
+  submitColor: '#0073e6',
+  inValidSubmitColor: '#99ccff',
   errorLight95: '#fce9ee',
   errorLight90: '#f9d2dd',
   errorLight85: '#f5bccb',
