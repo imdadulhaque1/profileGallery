@@ -1,11 +1,10 @@
-import {StyleSheet, Text, View} from 'react-native';
 import React, {FC} from 'react';
-import SignupScreen from '@views/auth/SignupScreen';
+import DashboardScreen from '@views/mainScreen/DashboardScreen';
 
 interface Props {}
 
 const App: FC<Props> = props => {
-  return <SignupScreen />;
+  return <DashboardScreen />;
 };
 
 export default App;

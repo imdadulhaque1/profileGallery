@@ -1,11 +1,4 @@
-import {
-  Dimensions,
-  Pressable,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
-} from 'react-native';
+import {Keyboard, StyleSheet, Text, View} from 'react-native';
 import React, {FC, useState} from 'react';
 import {Formik} from 'formik';
 import * as yup from 'yup';
@@ -44,11 +37,14 @@ const SignupScreen: FC<Props> = props => {
       .string()
       .oneOf([yup.ref('password')], 'Passwords must match'),
   });
+  const keyboardClose = () => {
+    Keyboard.dismiss();
+  };
   return (
     <View style={styles.container}>
       <MyStatusBar
-        backgroundColor={COLORS.primaryLight70}
-        barStyle={COLORS.primaryLight70}
+        backgroundColor={COLORS.primaryLight90}
+        barStyle={COLORS.primaryLight90}
       />
       <Formik
         validationSchema={signupValidationSchema}
@@ -65,17 +61,8 @@ const SignupScreen: FC<Props> = props => {
           isValid,
           isSubmitting,
         }) => (
-          <View style={styles.formikContainer}>
-            <Text
-              style={{
-                color: COLORS.black,
-                fontFamily: 'PlaywriteIS-Regular',
-                textAlign: 'center',
-                fontSize: screenWidth / 20,
-                marginVertical: 15,
-              }}>
-              Profile Gallery (Signup)
-            </Text>
+          <View onTouchStart={keyboardClose} style={styles.formikContainer}>
+            <Text style={styles.formTitleStyle}>Profile Gallery (Signup)</Text>
             <AuthInput
               label="Full Name"
               isIconShow={false}
@@ -150,7 +137,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: COLORS.primaryLight70,
+    backgroundColor: COLORS.primaryLight90,
     paddingHorizontal: 10,
   },
   formikContainer: {
@@ -160,10 +147,27 @@ const styles = StyleSheet.create({
     width: screenWidth - 50,
     padding: 15,
     borderRadius: 10,
+
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+
+    elevation: 5,
   },
   textStyle: {
     fontSize: 18,
     color: '#111111',
+  },
+  formTitleStyle: {
+    color: COLORS.black,
+    fontFamily: 'PlaywriteIS-Regular',
+    textAlign: 'center',
+    fontSize: screenWidth / 20,
+    marginVertical: 15,
   },
 });
 
