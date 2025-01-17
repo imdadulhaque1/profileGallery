@@ -1,26 +1,30 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React, {FC} from 'react';
+import Container from '@components/Container';
 
 interface Props {}
 
 const DashboardScreen: FC<Props> = props => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.textStyle}>Dashboard Screen</Text>
-    </View>
+    <Container>
+      <View style={styles.container}>
+        <Text style={styles.textStyle}>Welcome to My Profile</Text>
+      </View>
+    </Container>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    height: '100%',
+    width: '100%',
     justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
   },
   textStyle: {
     fontSize: 18,
     color: '#111111',
+    fontFamily: 'PlaywriteIS-Regular',
+    textAlign: 'center',
   },
 });
 
